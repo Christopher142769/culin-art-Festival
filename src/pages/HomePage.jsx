@@ -198,7 +198,7 @@ function HomePage() {
             <h1 className="hero-title-main">
               Culin'Art Festival
             </h1>
-            <p className="hero-dates">17 - 20 Décembre 2025</p>
+            <p className="hero-dates">17 - 21 Décembre 2025</p>
             <p className="hero-subtitle-main">
               Place de l'Amazone - Cotonou
             </p>

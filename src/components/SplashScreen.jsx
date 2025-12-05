@@ -70,3 +70,4 @@ function SplashScreen({ onComplete }) {
 
 export default SplashScreen
 
+

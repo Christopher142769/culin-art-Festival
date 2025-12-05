@@ -33,3 +33,4 @@ const VIDEO_URL = '/videos/grillades-culinart.mp4'
 - Vite sert automatiquement les fichiers du dossier `public/`
 - Après avoir ajouté votre vidéo, redémarrez le serveur de développement
 
+

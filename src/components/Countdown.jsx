@@ -11,8 +11,8 @@ function Countdown() {
   })
 
   useEffect(() => {
-    // Date de fin : 20 décembre 2025 à 23h59
-    const targetDate = new Date('2025-12-20T23:59:59').getTime()
+    // Date de fin : 21 décembre 2025 à 23h59
+    const targetDate = new Date('2025-12-21T23:59:59').getTime()
 
     const timer = setInterval(() => {
       const now = new Date().getTime()

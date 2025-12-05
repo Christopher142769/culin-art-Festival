@@ -39,3 +39,4 @@ Les templates sont stockés dans le localStorage. Pour changer le template par d
 - Les templates sont sauvegardés automatiquement
 - Utilisez des images de bonne qualité pour de meilleurs résultats
 
+

@@ -53,3 +53,4 @@ echo ""
 echo "4️⃣  To start frontend, run: npm run dev"
 echo "5️⃣  To stop server, run: kill $SERVER_PID"
 
+

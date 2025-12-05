@@ -60,3 +60,4 @@ npm run build
 
 Les templates sont stockés dans le localStorage du navigateur. Pour une utilisation en production, il est recommandé d'utiliser un backend pour stocker les templates et les images.
 
+
