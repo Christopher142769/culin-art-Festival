@@ -1,0 +1,148 @@
+.photo-uploader {
+  background: rgba(0, 0, 0, 0.02);
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-uploader.dragging {
+  border-color: var(--orange);
+  background: rgba(249, 131, 26, 0.05);
+  transform: scale(1.02);
+}
+
+.upload-area {
+  width: 100%;
+}
+
+.upload-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.upload-area h3 {
+  font-family: 'Satoshi', 'Inter', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+  font-weight: 900;
+}
+
+.upload-area p {
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.upload-btn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn:hover {
+  background: var(--orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 131, 26, 0.3);
+}
+
+.preview-container {
+  width: 100%;
+  position: relative;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+.change-photo-btn {
+  margin-top: 1.5rem;
+  background: transparent;
+  color: var(--black);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.change-photo-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: rgba(249, 131, 26, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .photo-uploader {
+    padding: 2rem 1.5rem;
+    min-height: 300px;
+  }
+
+  .upload-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .upload-area h3 {
+    font-size: 1.2rem;
+  }
+
+  .upload-area p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .upload-btn {
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .preview-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-uploader {
+    padding: 1.5rem 1rem;
+    min-height: 250px;
+  }
+
+  .upload-icon {
+    font-size: 3rem;
+  }
+
+  .upload-area h3 {
+    font-size: 1.1rem;
+  }
+
+  .upload-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+}

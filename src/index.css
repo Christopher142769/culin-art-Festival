@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Open Sauce Black';
+  src: url('https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap');
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --orange: #f9831a;
+  --black: #000000;
+  --white: #d7e2df;
+  --yellow: #e1a122;
+  --dark: #0a0a0a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
