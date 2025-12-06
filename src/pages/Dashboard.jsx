@@ -78,20 +78,25 @@ function Dashboard() {
       if (response.ok) {
         const data = await response.json()
         // Construire l'URL complète
-        const templateUrl = data.path.startsWith('http')
-          ? data.path
-          : `${window.location.origin}${data.path}`
+        // La réponse de l'API est { template: { path, id, name, ... } }
+        const template = data.template || data
+        if (!template || !template.path) {
+          throw new Error('Invalid response from server: missing template path')
+        }
+        const templateUrl = template.path.startsWith('http')
+          ? template.path
+          : `${window.location.origin}${template.path}`
         setTemplateImage(templateUrl)
         
         // Ajouter aux templates locaux (pour l'affichage dans la liste)
         const reader = new FileReader()
         reader.onload = (event) => {
           const newTemplate = {
-            id: data.id || Date.now(),
-            name: data.name || file.name,
+            id: template.id || Date.now(),
+            name: template.name || file.name,
             image: event.target.result, // Image en base64 pour l'affichage
             serverPath: templateUrl, // Chemin serveur pour l'utilisation
-            createdAt: data.createdAt || new Date().toISOString()
+            createdAt: template.createdAt || new Date().toISOString()
           }
           
           const updatedTemplates = [...templates, newTemplate]
@@ -189,9 +194,14 @@ function Dashboard() {
       if (response.ok) {
         const data = await response.json()
         // Construire l'URL complète
-        const logoUrl = data.path.startsWith('http') 
-          ? data.path 
-          : `${window.location.origin}${data.path}`
+        // La réponse de l'API est { logo: { path, ... } }
+        const logo = data.logo || data
+        if (!logo || !logo.path) {
+          throw new Error('Invalid response from server: missing logo path')
+        }
+        const logoUrl = logo.path.startsWith('http') 
+          ? logo.path 
+          : `${window.location.origin}${logo.path}`
         setFestivalLogo(logoUrl)
         // Ne pas sauvegarder dans localStorage - tout passe par l'API
       } else {
